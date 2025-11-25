@@ -1,8 +1,9 @@
 # Insightify_Full: Advanced Sentiment \& Keyword Analysis App
 
-Welcome to the **Insightify_Full** project! This application is designed to transform unstructured text data (reviews, comments, social media feedback, etc.) into actionable insights. It provides highly accurate **Sentiment Analysis** and **Keyword Extraction** by leveraging high-performance local **Deep Learning models (BERT)** and features an interactive web interface built with Flask.
+Welcome to the **Insightify_Full** project!  
 
-***
+This application is designed to transform unstructured text data (reviews, comments, social media feedback, etc.) into actionable insights.  
+It provides highly accurate **Sentiment Analysis**, **Keyword Extraction**, and **Pattern Exploration (Bigrams & Trigrams)** by leveraging high-performance local **Deep Learning models (BERT)**, and features an interactive web interface built with Flask.
 
 ## Features
 
@@ -10,7 +11,7 @@ Welcome to the **Insightify_Full** project! This application is designed to tran
 * **Intelligent Column Detection:** Automatically detects the main text/review column.
 * **Advanced Sentiment Analysis (BERT):** Uses a local **BERT** model (via `transformers`) for high-accuracy sentiment classification (**Positive, Negative, Neutral**).
 * **Keyword Extraction:** Extracts and ranks the most frequent and relevant keywords and concepts from the dataset.
-* **Interactive Visualizations (Plotly):** Displays analysis results (sentiment distribution and keyword frequency) using engaging and rich **Plotly** charts.
+* **Interactive Visualizations (Plotly):** Displays analysis results (sentiment distribution ,keyword frequency and pattern exploration) using engaging and rich **Plotly** charts.
 * **Data Persistence (PostgreSQL):** Saves all analysis session logs and individual results permanently to a **PostgreSQL** database using Flask-SQLAlchemy.
 * **Downloadable Report (PDF,CSV):** (Next planned feature) Generates a compressed ZIP file containing all results and prepared data tables.
 
@@ -25,7 +26,7 @@ To run the application with full functionality (including the powerful BERT mode
 Ensure your Python environment is active and install the necessary libraries:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.5
 ```
 
 
@@ -57,7 +58,7 @@ Open a second Terminal/Command Prompt window and start the frontend application:
 python app.py
 ```
 
-The application will be available at [http://127.0.0.1:5000](http://127.0.0.1:5000).
+The application will be available at http://127.0.0.1:5000 .
 
 ***
 
@@ -80,6 +81,12 @@ Displays the percentage breakdown of sentiment classifications (Positive, Negati
 2. Top Keywords Frequency
 *Type:* Interactive Horizontal Bar Chart.
 Shows the absolute frequencies of the most important keywords extracted from the cleaned text.
+3. Pattern Exploration (Frequent Bigrams & Trigrams)
+*Type:* Interactive Diverging Horizontal Bar Chart.
+This visualization highlights the most common word patterns (bigrams and trigrams) found in the customer reviews.  
+It helps uncover deeper linguistic structures such as repeated complaints, highly praised features, and recurring user experiences.  
+The diverging layout visually separates positive, neutral, and negative pattern strengths, allowing for clearer interpretation and deeper insights.
+
 
 ***
 
